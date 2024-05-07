@@ -1,13 +1,14 @@
 package school.hogwarts.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.Objects;
 
 @Entity(name= "faculties")
+@JsonIgnoreProperties(value = {"students}"})
 public class Faculty {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,6 +17,10 @@ public class Faculty {
     private String name;
 
     private String color;
+
+    @OneToMany(mappedBy = "faculty")
+    @JsonManagedReference
+    private List<Student> students;
 
 
     public Faculty()  {
@@ -49,6 +54,10 @@ public class Faculty {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public List<Student> getStudents() {
+        return students;
     }
 
     @Override
