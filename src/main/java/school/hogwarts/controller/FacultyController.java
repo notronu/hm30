@@ -2,6 +2,7 @@ package school.hogwarts.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import school.hogwarts.model.Faculty;
@@ -35,6 +36,7 @@ public class FacultyController {
         Faculty updatedFaculty = service.update(faculty);
         return ResponseEntity.ok(updatedFaculty);
     }
+
 
 
     @DeleteMapping("{id}")

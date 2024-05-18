@@ -20,4 +20,6 @@ public interface FacultyService {
     Collection<Faculty> getAll();
 
     Collection<Student> getStudents(Long facultyId);
+
+
 }

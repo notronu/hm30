@@ -4,6 +4,7 @@ import school.hogwarts.model.Faculty;
 import school.hogwarts.model.Student;
 
 import java.util.Collection;
+import java.util.Optional;
 
 public interface StudentService {
 
