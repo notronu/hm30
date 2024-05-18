@@ -1,9 +1,7 @@
 package school.hogwarts;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import net.datafaker.Faker;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,7 +14,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.mock.http.client.MockClientHttpResponse;
 import school.hogwarts.model.Faculty;
 import school.hogwarts.model.Student;
 import school.hogwarts.repository.FacultyRepository;
@@ -93,11 +90,6 @@ public class StudentControllerTestRestTemplateTest {
 
     });
     }
-
-
-
-
-
 
 
 
